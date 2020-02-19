@@ -36,7 +36,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='SimpleTweet(1).gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='SimpleTweet (1).gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [AZ Screen Recorder].
 
