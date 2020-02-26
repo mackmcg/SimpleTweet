@@ -5,15 +5,23 @@ import com.codepath.apps.restclienttemplate.TimeFormatter;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.parceler.Parcel;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Parcel
 public class Tweet {
     public String body;
     public String createdAt;
     public User user;
     public String timestamp;
+    public long id;
+
+
+   public Tweet (){
+       //empty constructor for parceler library
+   }
 
     public String getFormattedTimestamp (String createdAt){
         String formattedTime = TimeFormatter.getTimeDifference(createdAt);
@@ -25,6 +33,7 @@ public class Tweet {
         tweet.body = jsonObject.getString("text");
         tweet.createdAt = jsonObject.getString("created_at");
         tweet.user = User.fromJson(jsonObject.getJSONObject("user"));
+        tweet.id= jsonObject.getLong("id");
         return tweet;
     }
 
